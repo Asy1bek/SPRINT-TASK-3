@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button class="plus">+</button>
+        <h1 class="number">0</h1>
+        <button class="minus">-</button>
+
+        <script>
+            document.querySelector(".plus").addEventListener("click", add);
+            document.querySelector(".minus").addEventListener("click", sub);
+
+            function add() {
+                let number = parseInt(document.querySelector(".number").innerText);
+                number++;
+                document.querySelector(".number").innerText = number;
+            }
+
+            function sub() {
+                let number = parseInt(document.querySelector(".number").innerText);
+                number--;
+                document.querySelector(".number").innerText = number;
+            }
+        </script>
+    </body>
+</html>
